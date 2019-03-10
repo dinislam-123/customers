@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<link href="addcustomer.css" rel="stylesheet" type="text/css">-->
+</head>
+
+<body>
+        <p id="p1"><%=page_title%></p>
+
+        <div class="page-data">
+            
+            <form method="post" action="/customers/add">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Frist Name</td><td>: <input type="text" name="fname" required></input></td>
+                 </tr>
+                 <tr>
+                    <td class="label">Last Name</td><td>: <input type="text" name="lname" required ></input></td>
+                </tr>
+                <tr>
+                    <td class="label">Age</td><td>: <input type="text" name="age" required></td>
+                 </tr>
+
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        <input type="submit" name="submit" class="savebtn" value="Save">
+                       <!--<input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">-->
+                    </td>
+                 </tr>
+                </table>
+            </form>
+            
+        </div>
+<style>
+
+    #p1
+    {
+        background-color:red;
+        font-size:30px;
+        color: white;
+    }
+    .page-data
+    {
+        background-color: gainsboro;
+    }
+
+    .savebtn
+    {
+        width:80px;
+        font-weight: bold;
+        background-color: red;
+        color: white;
+        border-radius: 10px;
+    }
+
+</style>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+<p id="p1">Number of Record : <%=data.length%></p>
+
+<div class="list">
+
+    <table border="1" cellpadding="7" cellspacing="7">
+        <tr>
+            <th width="50px">No</th>
+            <th>Frist Name</th>
+            <th>Last name</th>
+            <th>Age</th>
+        </tr>
+
+        <% if(data.length){
+
+        for(var i = 0;i < data.length;i++) { %>
+
+        <tr>
+            <td><%=data[i].id%></td>
+            <td><%=data[i].fname%></td>
+            <td><%=data[i].lname%></td>
+            <td><%=data[i].age%></td>
+
+        </tr>
+        <% }
+
+        }else{ %>
+        <tr>
+            <td colspan="3">No user</td>
+        </tr>
+        <% } %>
+
+    </table>
+</div>
+<p id="p2"><%=title%></p>
+</div>
+
+<style>
+    #p1, #p2
+    {
+        background-color: red;
+        color:white;
+    }
+
+    .list
+    {
+        background-color: cadetblue;
+        color:white;
+    }
+</style>
+</body>
+</html>

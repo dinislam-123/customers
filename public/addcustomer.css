@@ -1,0 +1,21 @@
+/* add customer records form  */
+
+#p1
+{
+    background-color:red;
+    font-size:30px;
+    color: white;
+}
+.page-data
+{
+    background-color: gainsboro;
+}
+
+.savebtn
+{
+    width:80px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
