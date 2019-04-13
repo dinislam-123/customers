@@ -1,12 +1,9 @@
 
-
 // exports.list = function(req, res)
 // {
 //     // res.render('customers',{})
 //     res.render('index', { title: "First Express Program..." });
 // };
-
-
 
 exports.add = function(req, res)
 {
@@ -35,36 +32,27 @@ exports.save = function(req,res){
     // debugger;
 
     var input = JSON.parse(JSON.stringify(req.body));
-
     var connFn = function (err, connection) {
-
         var data = {
-
             fname : input.fname,
             lname : input.lname,
             age   : input.age
-
         };
 
         // console.log(data.fname);
 
         var q = "INSERT INTO mytable set ? ";
-
         var qFn = function(err, rows)
         {
             if (err)
                 console.log("Error inserting : %s ",err );
-
             res.redirect('/customers');
         };
-
         var query = connection.query(q,data, qFn);
     };
 
     req.getConnection(connFn);
 };
-
-
 
 exports.delete_customer = function(req,res)
 {
@@ -127,9 +115,9 @@ exports.save_edit = function(req,res){
             lname : input.lname,
             age   : input.age
         };
-        console.log(data.fname);
-
-        var q = "UPDATE mytable set ? WHERE id = id ";
+        // console.log(data.fname);
+       
+        var q = "UPDATE mytable set ? WHERE id=?";
 
         var qFn = function(err, rows)
         {
@@ -145,8 +133,6 @@ exports.save_edit = function(req,res){
 };
 req.getConnection(connFn);
 };
-
-
 
 exports.look = function(req, res)
 {

@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 
-<p class="ctitle"><%= title %></p>
-<p id="head1">Total Record:<%=data.length%></p>
+    <p class="ctitle"><%= title %></p>
 
-<div class="data-btn">
-    <button onClick="window.location.href = '/customers/add';" class="addbtn">+ Add Record</button>
-    <button onClick="window.location.href='/customers/look';" class="lookbtn">Search Record</button>
-</div>
-<div class="data-table">
-    <table border="1" cellpadding="7" cellspacing="7">
-        <tr>
-            <th width="50px">No</th>
-            <th>Frist Name</th>
-            <th>Last name</th>
-            <th>Age</th>
-            <th>Action</th>
-        </tr>
+    <div class="data-btn">
+        <p id="head1">Total Record:<%=data.length%></p><br>
 
-        <% if(data.length){
+        <button onClick="window.location.href = '/customers/add';" class="addbtn">+ Add Record</button>
+        <button onClick="window.location.href='/customers/look';" class="lookbtn">Search Record</button>
+    </div>
+    <div class="data-table">
+        <table border="1" cellpadding="7" cellspacing="7">
+            <tr>
+                <th width="50px">No</th>
+                <th>Frist Name</th>
+                <th>Last name</th>
+                <th>Age</th>
+                <th>Action</th>
+            </tr>
+
+            <% if(data.length){
 
         for(var i = 0;i < data.length;i++) { %>
 
-        <tr>
-            <td><%=data[i].id%></td>
-            <td><%=data[i].fname%></td>
-            <td><%=data[i].lname%></td>
-            <td><%=data[i].age%></td>
+            <tr>
+                <td><%=data[i].id%></td>
+                <td><%=data[i].fname%></td>
+                <td><%=data[i].lname%></td>
+                <td><%=data[i].age%></td>
 
-            <td>
-                <button class="edit-1"><a class="a-inside edit" href="../customers/edit/<%=data[i].id%>">Edit</a></button>
+                <td>
+                    <button class="edit-1"><a class="a-inside edit"
+                            href="../customers/edit/<%=data[i].id%>">Edit</a></button>
 
-                <button class="delete-1"><a class="a-inside delete" href="../customers/delete/<%=data[i].id%>">Delete</a></button>
+                    <button class="delete-1"><a class="a-inside delete"
+                            href="../customers/delete/<%=data[i].id%>">Delete</a></button>
 
-            </td>
-        </tr>
-        <% }
+                </td>
+            </tr>
+            <% }
 
         }else{ %>
-        <tr>
-            <td colspan="3">No user</td>
-        </tr>
-        <% } %>
+            <tr>
+                <td colspan="3">No user</td>
+            </tr>
+            <% } %>
 
-    </table>
-</div>
+        </table>
+    </div>
 </body>
+
 </html>

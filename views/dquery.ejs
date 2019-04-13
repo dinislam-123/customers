@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!--<link rel="stylesheet" href="index.css" type="css/text"/>-->
 </head>
 
 <body>
 
-<p class="ctitle">Search Customer Information Node.js </p>
+    <p class="ctitle">Search Customer Information Node.js </p>
 
-<form method="post" action="/test">
+    <form method="post" action="/test">
 
-    <div class="div1">
-    <div>
+        <div class="div1">
+            <div>
 
-        <input type="text" name="fname" placeholder="Enter Frist Name"></input>
-        <!--<input type="text" name="lname" placeholder="Enter last Name"></input>-->
-</div>
-<br>
-<div>
-    <!--<button onClick="window.location.href ='/test';" class="btn1">display</button>-->
-        <input type="submit" name="display" class="btn1" value="display">
-</div>
-    </div>
-</form>
-<style>
-    .ctitle
-    {
-        background-color:red;
-        font-size:30px;
-        color: white;
-    }
+                <input type="text" class="msearch" name="fname" placeholder="Enter Frist Name"></input>
+                <!--<input type="text" name="lname" placeholder="Enter last Name"></input>-->
+            </div>
+            <br>
+            <div>
+                <!--<button onClick="window.location.href ='/test';" class="btn1">display</button>-->
+                <input type="submit" name="display" class="btn1" value="display">
+            </div>
+        </div>
+    </form>
+    <style>
+        .ctitle {
+            background-color: red;
+            font-size: 30px;
+            color: white;
+            text-align: center;
 
-    .div1
-    {
-        padding-top: 10px;
-        background-color: aquamarine;
-        padding-bottom: 10px;
-    }
+        }
 
-    .btn1
-    {
-        background-color: red;
-        color:white;
-    }
-</style>
+        .div1 {
+            width:40%;
+            height:150px;
+            margin:auto;
+            /* padding-left:20%; */
+            text-align: center;
+            padding-top: 40px;
+            background-color: aquamarine;
+            /* padding-bottom: 10px; */
+        }
+
+        .btn1 {
+            width:110px;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: red;
+            color: white;
+        }
+        .msearch{
+            font-size: 15px;
+        }
+    </style>
 </body>
+
 </html>

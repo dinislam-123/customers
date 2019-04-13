@@ -8,8 +8,8 @@
 <div class="list">
 
     <table border="1" cellpadding="7" cellspacing="7">
-        <tr>
-            <th width="50px">No</th>
+        <tr class="thead">
+            <th width="50px">Id</th>
             <th>Frist Name</th>
             <th>Last name</th>
             <th>Age</th>
@@ -40,17 +40,24 @@
 </div>
 
 <style>
+    .thead{
+        color:yellow;
+    }
     #p1, #p2
     {
         background-color: red;
         color:white;
+        text-align: center;
     }
 
     .list
     {
+        width:30%;
+        margin:auto;
         background-color: cadetblue;
         color:white;
     }
+
 </style>
 </body>
 </html>

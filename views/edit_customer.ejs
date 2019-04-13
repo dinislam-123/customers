@@ -5,20 +5,20 @@
 <p id="p-edit"><%=title%></p>
 
 <div class="page-data">
-
+    <br>
     <form method="post" action="/customers/edit/<%=data[0].id%>">
         <table cellpadding="11">
             <tr>
-                <td class="label">Id </td><td>:<input type="text" value=<%=data[0].id%> name="id" readonly></input></td>
+                <td class="label">Id </td><td>:<input type="text"  class="id" value=<%=data[0].id%> name="id" readonly></input></td>
             </tr>
             <tr>
-                <td class="label">Frist Name </td><td>: <input type="text" value=<%=data[0].fname%> name="fname" required></input></td>
+                <td class="label">Frist Name </td><td>: <input type="text" class="field" value=<%=data[0].fname%> name="fname" required></input></td>
             </tr>
             <tr>
-                <td class="label">Last Name</td><td>: <input type="text" value=<%=data[0].lname%> name="lname" required ></input></td>
+                <td class="label">Last Name</td><td>: <input type="text" class="field" value=<%=data[0].lname%> name="lname" required ></input></td>
             </tr>
             <tr>
-                <td class="label">Age</td><td>: <input type="text" value=<%=data[0].age%> name="age" required></td>
+                <td class="label">Age</td><td>: <input type="number" class="mage" value=<%=data[0].age%> name="age" required></td>
             </tr>
 
             <tr>
@@ -34,22 +34,32 @@
 <style>
     #p-edit
     {
-        background-color:red;
+       text-align: center;
         font-size:30px;
         color: white;
+        background-color:red;
     }
     .page-data
     {
+        width:40%;
+        height:300px;
+        margin:auto;
         background-color: green;
     }
-
+    .field, .mage{
+        font-size: 15px;
+    }
+    .mage{
+        width:50px;
+    }
     .savebtn
     {
-        width:80px;
+        width:100px;
+        font-size: 15px;
         font-weight: bold;
         background-color: red;
         color: white;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
     input
@@ -59,6 +69,10 @@
 .label
 {
     color:white;
+}
+.id{
+    width:50px;
+    font-size: 15px;
 }
 
 </style>

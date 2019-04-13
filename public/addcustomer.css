@@ -1,4 +1,3 @@
-/* add customer records form  */
 
 #p1
 {
@@ -8,6 +7,9 @@
 }
 .page-data
 {
+    width:40%;
+    height:300px;
+    margin:auto;
     background-color: gainsboro;
 }
 

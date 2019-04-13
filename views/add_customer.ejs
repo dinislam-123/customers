@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--<link href="addcustomer.css" rel="stylesheet" type="text/css">-->
+    <!-- <link href="../addcustomer.css" rel="stylesheet" type="text/css"> -->
 </head>
 
 <body>
-        <p id="p1"><%=page_title%></p>
+        <p class="p1"><%=page_title%></p>
 
         <div class="page-data">
+            <br>
+            <br>
             
             <form method="post" action="/customers/add">
                 <table cellpadding="11">
                 <tr>
-                    <td class="label">Frist Name</td><td>: <input type="text" name="fname" required></input></td>
+                    <td class="label">Frist Name</td><td>: <input type="text" class="fname" name="fname" required></input></td>
                  </tr>
                  <tr>
-                    <td class="label">Last Name</td><td>: <input type="text" name="lname" required ></input></td>
+                    <td class="label">Last Name</td><td>: <input type="text" class="lname" name="lname" required ></input></td>
                 </tr>
                 <tr>
-                    <td class="label">Age</td><td>: <input type="text" name="age" required></td>
+                    <td class="label">Age</td><td>: <input type="number" class="mage" name="age" required></td>
                  </tr>
 
                  <tr>
@@ -34,26 +36,38 @@
         </div>
 <style>
 
-    #p1
+    .p1
     {
+        /* width:40%; */
         background-color:red;
         font-size:30px;
         color: white;
+        text-align: center;
     }
     .page-data
     {
-        background-color: gainsboro;
+    width:40%;
+    height:300px;
+    margin:auto;
+    background-color: gainsboro;
     }
 
     .savebtn
     {
         width:80px;
+        height:40px;
         font-weight: bold;
+        font-size: 15px;
         background-color: red;
         color: white;
         border-radius: 10px;
     }
-
+    .mage{
+        width:40px;
+    }
+    .fname, .lname, .mage{
+        font-size: 15px;
+    }
 </style>
 </body>
 </html>

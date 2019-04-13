@@ -4,6 +4,7 @@
     background-color:red;
     font-size:40px;
     color: white;
+    text-align: center;
 }
 
 .addbtn,.lookbtn
@@ -28,11 +29,22 @@
     font-size: 16px;
     width: 120px;
 }
+.data-btn{
+    width:40%;
+    margin:auto;
+}
+.addbtn, .lookbtn{
+    font-size: 15px;
+    width:150px;
+}
 .data-table
 {
     padding-top: 10px;
     background-color: lightgrey;
     color: blue;
+    margin: auto;
+    width:40%;
+    /* height:300px; */
 }
 
 .edit-1, .delete-1
