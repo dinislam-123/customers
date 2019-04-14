@@ -5,6 +5,8 @@
 //     res.render('index', { title: "First Express Program..." });
 // };
 
+var conn = require('../config/connection');
+
 exports.add = function(req, res)
 {
     res.render('add_customer',{page_title:"Add Customers Record Node.js"});
@@ -13,7 +15,7 @@ exports.add = function(req, res)
 exports.testlist = function(req, res) {
 
 
-    req.getConnection(function (err, connection) {
+    conn.getConnection(function (err, connection) {
 
 
     var query = connection.query('SELECT * FROM mytable', function (err, rows) {
@@ -51,7 +53,7 @@ exports.save = function(req,res){
         var query = connection.query(q,data, qFn);
     };
 
-    req.getConnection(connFn);
+    conn.getConnection(connFn);
 };
 
 exports.delete_customer = function(req,res)
@@ -75,7 +77,7 @@ exports.delete_customer = function(req,res)
 
     };
 
-    req.getConnection(connFn);
+    conn.getConnection(connFn);
 };
 
 
@@ -99,7 +101,7 @@ exports.edit = function (req,res) {
         };
         connection.query(q, [id], qFn);
     };
-    req.getConnection(connFn);
+    conn.getConnection(connFn);
 };
 
 exports.save_edit = function(req,res){
@@ -131,7 +133,7 @@ exports.save_edit = function(req,res){
 
     connection.query(q,[data,id], qFn);
 };
-req.getConnection(connFn);
+conn.getConnection(connFn);
 };
 
 exports.look = function(req, res)
@@ -141,7 +143,7 @@ exports.look = function(req, res)
 
 exports.display = function(req, res) {
 
-    req.getConnection(function (err, connection)
+    conn.getConnection(function (err, connection)
     {
             var input = JSON.parse(JSON.stringify(req.body));
 

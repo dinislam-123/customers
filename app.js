@@ -4,35 +4,43 @@ var http = require('http');
 var path = require('path');
 var bodyParser = require('body-parser');
 
-// var dbcon = require('./config/connection');
 // var favicon = require('static-favicon');
 // var logger = require('morgan');
 // var cookieParser = require('cookie-parser');
 
-var mysql = require('mysql');
-var connection  = require('express-myconnection');
+// var conn = require('./config/connection');
+// var connection  = require('express-myconnection');
 
 var app = express();
 
 
 app.set('views', path.join(__dirname, 'views'));
-
 app.set('view engine', 'ejs');
-
 app.use(express.static(__dirname + '/public'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
-app.use(
-    connection(mysql,{
-        host: 'localhost',
-        user: 'root',
-        password : 'root',
-        port : 3306,
-        database:'mydata'
-    },'request')
-);
+// app.use(
+//     connection(mysql,{
+
+// Host:   '37.59.55.185'
+    // Port:3306,
+// Username: 'E13HOqhRBJ',
+// Password: 'mGNHY2i6Sr',
+// Database : 'E13HOqhRBJ'
+// Server: 'remotemysql.com',
+
+// Port:3306
+
+        // host: 'localhost',
+        // user: 'root',
+        // password : 'root',
+        // port : 3306,
+        // database:'mydata'
+//     },'request')
+// );
+
 
 var server = app.listen(4302, function ()
 {
