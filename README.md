@@ -1,5 +1,5 @@
-# customers
-- Customers Information System
+
+# Customers Information System
 
 It is Front and backend system and I am sole Developer
 This system will help to manipulate customer info for any business. This system can help to
@@ -7,7 +7,7 @@ develop big organization system
 
 The Technologies I have used
 
--- Mysql, MVC Architecture, node.js, express.js, Ejs and Css
+# Mysql, MVC Architecture, node.js, express.js, Ejs and Css
 
 some screen shots I have attached below:
 
