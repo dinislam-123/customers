@@ -13,11 +13,7 @@ exports.add = function(req, res)
 };
 
 exports.testlist = function(req, res) {
-
-
     conn.getConnection(function (err, connection) {
-
-
     var query = connection.query('SELECT * FROM mytable', function (err, rows) {
 
         if (err) {
@@ -27,6 +23,7 @@ exports.testlist = function(req, res) {
     });
 });
 };
+
 
 exports.save = function(req,res){
     debugger;
@@ -52,50 +49,39 @@ exports.save = function(req,res){
         };
         var query = connection.query(q,data, qFn);
     };
-
     conn.getConnection(connFn);
 };
 
+exports.useralert = function(req, res){
+    var id = req.params.id;
+    var fname=req.params.fname;
+    res.render('user_alert',{id:id, fname:fname});
+}
+
 exports.delete_customer = function(req,res)
 {
-
     var id = req.params.id;
-
     var connFn = function (err, connection) {
-
         var q = "DELETE FROM mytable WHERE id = ? ";
-
         var qFn = function(err, rows)
         {
             if(err)
                 console.log("Error deleting : %s ",err );
-
             res.redirect('/customers');
         };
-
         connection.query(q,[id],qFn);
-
     };
-
     conn.getConnection(connFn);
-};
-
+}
 
 exports.edit = function (req,res) {
-
     var id = req.params.id;
-
     var connFn = function (err, connection) {
-
-
         var q = 'SELECT * FROM mytable WHERE id = ?';
-
         var qFn = function (err, rows) {
-
             if (err) {
                 console.log("Error Selecting : %s ", err);
             }
-
             res.render('edit_customer', {title: "Edit Customers Information Node.js", data: rows});
         //     console.log(data);
         };
@@ -108,9 +94,7 @@ exports.save_edit = function(req,res){
 
     var input = JSON.parse(JSON.stringify(req.body));
     var id = req.params.id;
-
     var connFn = function (err, connection) {
-
         var data = {
 
             fname : input.fname,
@@ -120,17 +104,13 @@ exports.save_edit = function(req,res){
         // console.log(data.fname);
        
         var q = "UPDATE mytable set ? WHERE id=?";
-
         var qFn = function(err, rows)
         {
 
         if (err)
             console.log("Error Updating : %s ",err );
-
         res.redirect('/customers');
-
     };
-
     connection.query(q,[data,id], qFn);
 };
 conn.getConnection(connFn);
@@ -142,16 +122,13 @@ exports.look = function(req, res)
 };
 
 exports.display = function(req, res) {
-
     conn.getConnection(function (err, connection)
     {
-            var input = JSON.parse(JSON.stringify(req.body));
-
-            var data1 = {
-
-                fname: input.fname
+        var input = JSON.parse(JSON.stringify(req.body));
+        var data1 = {
+             fname: input.fname
                 // lname:input.lname
-            };
+        };
 
             // console.log(data1.fname);
 
@@ -166,7 +143,6 @@ exports.display = function(req, res) {
             {
                 console.log("Error Selecting : %s ", err);
             }
-
             res.render('test', {title: "Frist Express Customers - Node.js", data: rows});
         });
     });

@@ -2,12 +2,13 @@ var mysql = require("mysql");
 
 var pool = mysql.createPool({
 
-    // Host:'www.remotemysql.com',
-    // // host:'37.59.55.185'
+    // host:'www.remotemysql.com',
+    // port:3306,
+    // // host:'37.59.55.185',
     // Username: 'E13HOqhRBJ',
     // Password: 'mGNHY2i6Sr',
     // Database : 'E13HOqhRBJ',
-    // Port:3306
+
         host: 'localhost',
         user: 'root',
         password : 'root',

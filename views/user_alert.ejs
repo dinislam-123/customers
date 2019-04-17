@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--<link rel="stylesheet" href="index.css" type="css/text"/>-->
+</head>
+
+<body>
+
+    <p class="ctitle">user alert </p>
+    <div class="div1">
+        <p name="id"><%=id%></p>
+        <p name="fname"><%=fname%></p>
+        <div class="div2">
+            <p>Are you sure to .. delete ?</p><br>
+
+            <button class="btn1" onclick="window.location.href='/customers/delete/<%=id%>';">Ok</button>
+            <button class="btn1" onclick="window.location.href='/customers';">Cancel</button>
+
+            <!-- <button onClick="window.location.href ='/test';" class="btn1">display</button> -->
+        </div>
+        <div>
+
+            <style>
+                .ctitle {
+                    background-color: red;
+                    font-size: 30px;
+                    color: white;
+                    text-align: center;
+
+                }
+
+                .div1 {
+                    width: 40%;
+                    height: 250px;
+                    margin: auto;
+                    /* padding-left:20%; */
+                    text-align: center;
+                    padding-top: 40px;
+                    background-color: aquamarine;
+                    /* padding-bottom: 10px; */
+                }
+
+                .btn1 {
+                    width: 110px;
+                    font-size: 15px;
+                    font-weight: bold;
+                    background-color: red;
+                    color: white;
+                }
+            </style>
+</body>
+
+</html>

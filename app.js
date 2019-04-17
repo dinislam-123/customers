@@ -21,18 +21,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
-// app.use(
-//     connection(mysql,{
-
-// Host:   '37.59.55.185'
-    // Port:3306,
-// Username: 'E13HOqhRBJ',
-// Password: 'mGNHY2i6Sr',
-// Database : 'E13HOqhRBJ'
-// Server: 'remotemysql.com',
-
-// Port:3306
-
         // host: 'localhost',
         // user: 'root',
         // password : 'root',

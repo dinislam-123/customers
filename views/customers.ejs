@@ -17,7 +17,7 @@
     </div>
     <div class="data-table">
         <table border="1" cellpadding="7" cellspacing="7">
-            <tr>
+            <tr class="tabhead">
                 <th width="50px">No</th>
                 <th>Frist Name</th>
                 <th>Last name</th>
@@ -27,7 +27,7 @@
 
             <% if(data.length){
 
-        for(var i = 0;i < data.length;i++) { %>
+        for(var i = 0; i < data.length; i++) { %>
 
             <tr>
                 <td><%=data[i].id%></td>
@@ -37,11 +37,13 @@
 
                 <td>
                     <button class="edit-1"><a class="a-inside edit"
-                            href="../customers/edit/<%=data[i].id%>">Edit</a></button>
-
-                    <button class="delete-1"><a class="a-inside delete"
-                            href="../customers/delete/<%=data[i].id%>">Delete</a></button>
-
+                            href="/customers/edit/<%=data[i].id%>">Edit</a></button>
+ 
+                       <button class="delete-1"><a class="a-inside delete" href="/useralert/<%=data[i].id%>,<%=data[i].fname%>">Delete</a></button>
+<!-- 
+                      <button class="delete-1"><a class="a-inside delete"
+                                    href="/customers/delete/<%=data[i].id%>">Delete</a></button> -->
+                        
                 </td>
             </tr>
             <% }
@@ -54,6 +56,53 @@
 
         </table>
     </div>
-</body>
+    <!-- <div id="modal" class="modal">
+        <div class="modal-content">
+             <a class="close" onClick="close_btn()">X</a>
+             <span class="close">&times;</span> 
+             <p>data('id')</p> 
+             <p>Are you sure to delete..?</p>
+            <button class="modal_btn" onclick="ok_btn()">Ok</button>
+            <button class="modal_btn" onclick="cancel_btn()">Cancel</button>
+        </div> 
 
+    </div>  -->
+
+     <!-- <script> 
+
+        function useralert(){
+
+            var attrdata = document.getElementById('user-data');
+            var show = attrdata.getAttribute('data-id');
+            // var dataid = getAttribute.data('id');
+            window.alert(show);
+            // modal.style.display="block";
+        }
+        function close_btn(){
+            modal.style.display="none";
+        }
+
+        function cancel_btn(){
+            modal.style.display="none";
+        }  
+
+         // function ok_btn(){
+        //     modal.style.display="none";
+        //     $.ajax({
+        //      url: "/api/books"
+        //   })
+        //   .done(function( data ) {
+        //      console.log( "Sample of data:", data );
+        //      $('#holder').html(data.message);
+        //   });
+
+        // }
+
+            // When the user clicks anywhere outside of the modal, close it
+            // window.onclick = function (event) {
+            //     if (event.target == modal) {
+            //         modal.style.display = "none";
+        //  }
+     </script>  -->
+</body>
 </html>
